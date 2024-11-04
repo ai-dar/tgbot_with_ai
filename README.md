@@ -1,11 +1,12 @@
-# Telegram ChatBot with Conversation History
+# AI-Powered Telegram ChatBot with Conversation History
 
-This project is a Telegram bot built with `aiogram`, which maintains a conversation history with users. It uses `g4f` for generating responses and supports clearing the chat history with a command.
+This project is an AI-powered Telegram bot built using `aiogram` and `g4f`. The bot leverages artificial intelligence to generate conversational responses, providing an interactive experience for users. It keeps track of conversation history, enabling more context-aware interactions and offering users the option to reset the chat with a simple command.
 
 ## Features
 
-- **Maintains Conversation History**: Tracks and remembers the conversation history with each user.
-- **Chat History Trimming**: Automatically trims the conversation history to a specified character limit.
+- **AI-Powered Responses**: Uses AI to generate contextually relevant replies, creating an engaging chat experience.
+- **Maintains Conversation History**: Tracks and remembers conversation history with each user for more coherent replies.
+- **Chat History Trimming**: Automatically trims conversation history to a specified character limit for efficiency.
 - **Clear Chat History**: Users can clear their conversation history with the `/clear` command.
 - **Error Handling**: Provides a fallback response if the AI model or API encounters an error.
 
@@ -38,21 +39,22 @@ This project is a Telegram bot built with `aiogram`, which maintains a conversat
     ```
 
 2. **Bot Commands**:
-    - **`/clear`**: Clears the conversation history for the user.
+    - **`/clear`**: Clears the conversation history for the user, allowing for a fresh start in the conversation.
 
 3. **Chat with the bot**:
-    - Simply type your messages to start interacting with the bot.
+    - Type any message to start a conversation with the AI. The bot will provide responses based on the context of the conversation history.
 
 ## Code Explanation
 
-- **`trim_history`**: Trims conversation history to a maximum length to ensure it stays within the limit.
+- **AI Integration**: Utilizes `g4f` to access an AI model that processes conversation history and generates responses.
+- **`trim_history`**: Ensures conversation history stays within a character limit to prevent overloading the AI model.
 - **Command Handlers**:
   - **`/clear`**: Clears the user's conversation history.
   - **Message Handler**: Receives user messages, sends them to the AI model, and returns the generated response.
 
 ## Error Handling
 
-If the bot encounters an error while generating a response, it will send a fallback message to the user notifying them of the issue.
+If the bot encounters an issue with the AI service, it sends a fallback message to the user, notifying them of the temporary error.
 
 ## License
 
